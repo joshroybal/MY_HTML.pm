@@ -56,7 +56,7 @@ sub print_form {  # subroutine prints hash based html form
          print "<input type='$type' name='$name'>\n";
       } elsif ($type eq 'radio') {
          my $status = $field_hash{$key}[4];
-         print "<div><label>$label</label><input type='$type' name='$name' value='$value' $status><div>\n";
+         print "<div><label>$label</label><input type='$type' name='$name' value='$value' $status></div>\n";
       } elsif ($type eq 'textarea') {
          print "<label>$label</label><div><$type name='$name' rows='12' cols='80'>$value</textarea></div>\n";
       } else {
