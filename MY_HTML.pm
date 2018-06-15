@@ -47,7 +47,7 @@ sub print_form {  # subroutine prints hash based html form
    my ($action, %field_hash) = @_;
    # print out the form
    print "<form action='$action' method='POST'>\n";
-   foreach my $key (sort keys %field_hash) {
+   foreach my $key (sort { $a <=> $b } keys %field_hash) {
       my $label = $field_hash{$key}[0];
       my $type = $field_hash{$key}[1];
       my $name = $field_hash{$key}[2];
